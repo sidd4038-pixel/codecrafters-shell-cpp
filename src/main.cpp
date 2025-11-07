@@ -12,6 +12,10 @@ int main()
     std::cout << "$ ";
     std::string line;
     std::getline(std::cin, line);
+    if(line == "exit"){
+      std::cout << "exit 0" << std::endl;
+      break;
+    }
     std::cout << line << ": command not found" << std::endl;
   }
 
