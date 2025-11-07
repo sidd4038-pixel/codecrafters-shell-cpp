@@ -1,16 +1,19 @@
 #include <iostream>
 #include <string>
 
-int main() {
+int main()
+{
   // Flush after every std::cout / std:cerr
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  std::cout << "$ ";
-  std::string line;
-  std::getline(std::cin,line);
-  std::cout<<line<<": command not found" << std::endl;
+  while (true)
+  {
+    std::cout << "$ ";
+    std::string line;
+    std::getline(std::cin, line);
+    std::cout << line << ": command not found" << std::endl;
+  }
 
   return 0;
-  
 }
